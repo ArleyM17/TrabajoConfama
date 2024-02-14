@@ -29,18 +29,166 @@
   .navbar a.right {
     float: right;
   }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .card {
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .card .content {
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .card p {
+    color: #666;
+  }
+  
+  .card .info {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .card:hover .info {
+    display: block;
+  }
 </style>
 </head>
 <body>
 
-<div class="navbar">
-    <a href="Index.html">Necocli</a>
-    <a href="Hoteles.html">Hoteles</a>
-    <a href="Restaurante.html">Restaurantes</a>
-    <a href="Sitios.html">Sitios Turísticos</a>
-    <a href="Reseña.html">Reseña</a>
-    <a href="AcercaDe.html" class="right">Acerca de</a>
-    </div>
+    <div class="navbar">
+        <a href="Index.html">Necocli</a>
+        <a href="Hoteles.html" class="right">Hoteles</a>
+        <a href="Restaurante.html" class="right">Restaurantes</a>
+        <a href="Sitios.html" class="right">Sitios Turísticos</a>
+        <a href="Reseña.html" class="right">Reseña</a>
+        <a href="AcercaDe.html" class="right">Acerca de</a>
+      </div>
 
+    <br><br>
+    <h2 style="text-align: center;">Disfruta de nuestros mejores restaurantes</h2> 
+          <br><br>
+<div class="container">
+    <div class="card">
+        <div class="image-container">
+          <img src="imagen.jpg" alt="Imagen">
+          <div class="overlay">
+            <div class="text">
+              <h2>Nombre del restaurante</h2>
+              <p>Información sobre el restaurante...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image-container">
+          <img src="imagen.jpg" alt="Imagen">
+          <div class="overlay">
+            <div class="text">
+              <h2>Nombre del restaurante</h2>
+              <p>Información sobre el restaurante...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>     
+<div class="container">
+        <div class="card">
+          <img src="restaurante1.jpg" alt="Restaurante 1">
+          <div class="content">
+            <h3>Restaurante 1</h3>
+            <div class="info">
+              <p>Información sobre Restaurante 1...</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <img src="restaurante2.jpg" alt="Restaurante 2">
+          <div class="content">
+            <h3>Restaurante 2</h3>
+            <div class="info">
+              <p>Información sobre Restaurante 2...</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+            <img src="restaurante1.jpg" alt="Restaurante 1">
+            <div class="content">
+              <h3>Restaurante 1</h3>
+              <div class="info">
+                <p>Información sobre Restaurante 1...</p>
+              </div>
+            </div>
+          </div>
+</div>
+
+<div class="container">
+        <div class="card">
+            <img src="restaurante2.jpg" alt="Restaurante 2">
+            <div class="content">
+              <h3>Restaurante 2</h3>
+              <div class="info">
+                <p>Información sobre Restaurante 2...</p>
+              </div>
+            </div>
+          </div>
+
+        <div class="card">
+            <img src="restaurante1.jpg" alt="Restaurante 1">
+            <div class="content">
+              <h3>Restaurante 1</h3>
+              <div class="info">
+                <p>Información sobre Restaurante 1...</p>
+              </div>
+            </div>
+          </div>
+
+        <div class="card">
+            <img src="restaurante2.jpg" alt="Restaurante 2">
+            <div class="content">
+              <h3>Restaurante 2</h3>
+              <div class="info">
+                <p>Información sobre Restaurante 2...</p>
+              </div>
+            </div>
+          </div>
+      
+</div>
 </body>
 </html>
