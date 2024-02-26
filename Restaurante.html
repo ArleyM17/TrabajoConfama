@@ -9,6 +9,7 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #eeb438;
   }
   .navbar {
     background-color: #333;
@@ -33,7 +34,7 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    
   }
   
   .container {
@@ -50,7 +51,7 @@
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    background-color: rgb(40, 40, 230);
+    background-color: #fff; /* Color de fondo de la tarjeta */
   }
   
   .card:hover {
@@ -62,22 +63,20 @@
     height: 200px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
-
   }
   
   .card .content {
     padding: 20px;
-    background-color: #fff;
   }
   
   .card h3 {
     margin-top: 0;
     font-size: 24px;
-    color: #333;
+    color: #333; /* Color de texto del título */
   }
   
   .card p {
-    color: #666;
+    color: #666; /* Color de texto del contenido */
   }
   
   .card .info {
@@ -88,24 +87,34 @@
   .card:hover .info {
     display: block;
   }
+  header {
+    background-color: #006d9c; /* Color de fondo del encabezado */
+    color: #fff; /* Color de texto del encabezado */
+    padding: 20px;
+    text-align: center;
+  }
 </style>
 </head>
 <body>
 
-    <div class="navbar">
-        <a href="Index.html">Necocli</a>
-        <a href="Hoteles.html" class="right">Hoteles</a>
-        <a href="Restaurante.html" class="right">Restaurantes</a>
-        <a href="Sitios.html" class="right">Sitios Turísticos</a>
-        <a href="Reseña.html" class="right">Reseña</a>
-        <a href="AcercaDe.html" class="right">Acerca de</a>
-      </div>
+<div class="navbar">
+  <a href="Index.html">Necocli</a>
+  <a href="Hoteles.html" class="right">Hoteles</a>
+  <a href="Restaurante.html" class="right">Restaurantes</a>
+  <a href="Sitios.html" class="right">Sitios Turísticos</a>
+  <a href="Reseña.html" class="right">Reseña</a>
+  <a href="AcercaDe.html" class="right">Acerca de</a>
+</div>
 
-    <br><br>
-    <h2 style="text-align: center;">Disfruta de nuestros mejores restaurantes</h2> 
-          <br><br>
+<br>
+<header>
+  <h1>Disfruta de nuestros mejores restaurantes</h1>
+</header>
+
+
+<br><br>
 <div class="container">
-    <div class="card">
+    <div class="card" style="background-color: #f7dfb5;"> <!-- Color de fondo de la tarjeta -->
         <div class="image-container">
           <img src="img/ganadero.jpg" alt="Imagen">
           <div class="overlay">
@@ -118,7 +127,7 @@
           </div>
         </div>
       </div>
-      <div class="card">
+      <div class="card" style="background-color: #fbe4b5;"> <!-- Color de fondo de la tarjeta -->
         <div class="image-container">
           <img src="img/antorchas.jpg" alt="Imagen">
           <div class="overlay">
@@ -131,7 +140,7 @@
       </div>
 </div>     
 <div class="container">
-        <div class="card">
+        <div class="card" style="background-color: #ffefb5;"> <!-- Color de fondo de la tarjeta -->
           <img src="img/mangata.png" alt="Restaurante 1">
           <div class="content">
             <h3>Mangata Cafe Bar</h3>
@@ -141,7 +150,7 @@
           </div>
         </div>
         
-        <div class="card">
+        <div class="card" style="background-color: #ffcbb5;"> <!-- Color de fondo de la tarjeta -->
           <img src="img/burguer tin.jpg" alt="Restaurante 2">
           <div class="content">
             <h3>Burger Tin</h3>
@@ -152,7 +161,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" style="background-color: #ffdfb5;"> <!-- Color de fondo de la tarjeta -->
             <img src="img/galapagos.jpg" alt="Restaurante 1">
             <div class="content">
               <h3>Galapagos</h3>
@@ -164,7 +173,7 @@
           </div>
 </div>
 <div class="container">
-        <div class="card">
+        <div class="card" style="background-color: #ffe9b5;"> <!-- Color de fondo de la tarjeta -->
             <img src="img/rdb7-Restaurante-Juan-Delamar-exterior.jpg" alt="Restaurante 2">
             <div class="content">
               <h3>Juan Delamar</h3>
@@ -174,7 +183,7 @@
             </div>
           </div>
 
-        <div class="card">
+        <div class="card" style="background-color: #fff4b5;"> <!-- Color de fondo de la tarjeta -->
             <img src="img/plaza.jpg" alt="Restaurante 1">
             <div class="content">
               <h3>Plaza de Mercado</h3>
@@ -184,7 +193,7 @@
             </div>
           </div>
 
-        <div class="card">
+        <div class="card" style="background-color: #ffefb5;"> <!-- Color de fondo de la tarjeta -->
             <img src="img/marquesa.jpg" alt="Restaurante 2">
             <div class="content">
               <h3>El Patio de la Marquesa</h3>
