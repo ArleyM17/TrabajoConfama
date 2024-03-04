@@ -1,101 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reseña</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #eeb438; /* Color de fondo neutro */
-    color: #333; /* Color de texto principal */
-  }
-  .navbar {
-    background-color: #333; /* Color de fondo de la barra de navegación */
-    overflow: hidden;
-  }
-  .navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2; /* Color de texto de los enlaces de la barra de navegación */
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  .navbar a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  .navbar a.right {
-    float: right;
-  }
-  header {
-    background-color: #006d9c; /* Color de fondo del encabezado */
-    color: #fff; /* Color de texto del encabezado */
-    padding: 20px;
-    text-align: center;
-  }
-  .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
-  }
-  h1 {
-    color: #333; /* Color de texto del título */
-  }
-  p {
-    margin-bottom: 20px;
-    line-height: 1.6;
-  }
-  .image {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .image img {
-    max-width: 100%;
-    height: auto;
-  }
-</style>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Reseña</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #eeb438; /* Color de fondo neutro */
+                color: #333; /* Color de texto principal */
+            }
+            .navbar {
+                background-color: #333; /* Color de fondo de la barra de navegación */
+                overflow: hidden;
+                background-color: #333;
+                opacity: 1;
+                background-image: linear-gradient(
+                        30deg,
+                        #000000 12%,
+                        transparent 12.5%,
+                        transparent 87%,
+                        #000000 87.5%,
+                        #000000
+                    ),
+                    linear-gradient(
+                        150deg,
+                        #000000 12%,
+                        transparent 12.5%,
+                        transparent 87%,
+                        #000000 87.5%,
+                        #000000
+                    ),
+                    linear-gradient(
+                        30deg,
+                        #000000 12%,
+                        transparent 12.5%,
+                        transparent 87%,
+                        #000000 87.5%,
+                        #000000
+                    ),
+                    linear-gradient(
+                        150deg,
+                        #000000 12%,
+                        transparent 12.5%,
+                        transparent 87%,
+                        #000000 87.5%,
+                        #000000
+                    ),
+                    linear-gradient(
+                        60deg,
+                        #00000077 25%,
+                        transparent 25.5%,
+                        transparent 75%,
+                        #00000077 75%,
+                        #00000077
+                    ),
+                    linear-gradient(
+                        60deg,
+                        #00000077 25%,
+                        transparent 25.5%,
+                        transparent 75%,
+                        #00000077 75%,
+                        #00000077
+                    );
+                background-size: 32px 56px;
+                background-position: 0 0, 0 0, 16px 28px, 16px 28px, 0 0, 16px 28px;
+            }
+            .navbar a {
+                float: left;
+                display: block;
+                color: #f2f2f2; /* Color de texto de los enlaces de la barra de navegación */
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .navbar a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+            .navbar a.right {
+                float: right;
+            }
+            header {
+                background-color: #006d9c; /* Color de fondo del encabezado */
+                color: #fff; /* Color de texto del encabezado */
+                padding: 20px;
+                text-align: center;
+            }
+            .container {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 0 20px;
+            }
+            h1 {
+                color: #333; /* Color de texto del título */
+            }
+            p {
+                margin-bottom: 20px;
+                line-height: 1.6;
+            }
+            .image {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .image img {
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="Index.html">Necocli</a>
+            <a href="Hoteles.html" class="right">Hoteles</a>
+            <a href="Restaurante.html" class="right">Restaurantes</a>
+            <a href="Sitios.html" class="right">Sitios Turísticos</a>
+            <a href="Reseña.html" class="right">Reseña</a>
+            <a href="AcercaDe.html" class="right">Acerca de</a>
+        </div>
 
-<div class="navbar">
-  <a href="Index.html">Necocli</a>
-  <a href="Hoteles.html" class="right">Hoteles</a>
-  <a href="Restaurante.html" class="right">Restaurantes</a>
-  <a href="Sitios.html" class="right">Sitios Turísticos</a>
-  <a href="Reseña.html" class="right">Reseña</a>
-  <a href="AcercaDe.html" class="right">Acerca de</a>
-</div>
+        <header>
+            <h1>Municipio Necoclí</h1>
+        </header>
 
-<header>
-  <h1>Municipio Necoclí</h1>
-</header>
-
-<div class="container">
-  <div class="image">
-      <img src="img/necocli.jpg" alt="Necoclí">
-  </div>
-  <p>Necoclí, está ubicado en la subregión de Urabá, en el departamento de Antioquia, Colombia. Es conocido por sus hermosas playas, donde los visitantes pueden disfrutar del sol, la arena y el mar Caribe. Además, el pueblo conserva tradiciones culturales únicas, como el centenario ritmo del bullerengue.</p>
-  <br><br>
-  <div class="image">
-      <img src="img/playa.jpg" alt="Necoclí">
-  </div>
-  <p>En Necoclí, los turistas pueden explorar la riqueza natural de la región, incluyendo manglares, estuarios y reservas naturales. La gastronomía local es también una atracción destacada, con platos que resaltan los sabores del mar y la tradición culinaria antioqueña.</p>
-  <br><br>
-  <div class="image">
-    <img src="img/presentacion.jpg" alt="Necoclí">
-  </div>
-  <p>Bienvenidos al Municipio de Necoclí
-
-  El sonido de las olas cuando besan la playa, el del viento que mece las palmeras, la tranquilidad que se respira y la enorme riqueza natural, son algunos de los muchos atractivos turísticos de la región. San Sebastián de Urabá, como fue denominada por los conquistadores, no es sólo playa y sol. A una hora de viaje por mar abierto, la naturaleza sorprende por su majestuosidad.
-
-   
-  Su parque principal, situado en el lugar donde se construyó la primera plaza de mercado, es un lugar amplio rodeado por palmeras, árboles y cocoteros donde revolotean cientos de palomas. Es un municipio alegre por tradición y entre sus fiestas podemos citar las tradicionales Fiestas del Coco, El Festival Nacional del Bullerengue y el Carnaval de Verano. Estas actividades reflejan la tradición ancestral caribeña de nuestros primeros colonos que llegaron posterior a la conquista, de esta manera se empezó a poblar el hoy Municipio de Necoclí.
-
-  ¡Por El Necoclí Que Soñamos!</p>
-</div>
-</body>
+        <div class="container">
+            <div class="image">
+                <img src="img/necocli.jpg" alt="Necoclí" />
+            </div>
+            <p>
+                Necoclí, está ubicado en la subregión de Urabá, en el departamento de Antioquia, Colombia. Es
+                conocido por sus hermosas playas, donde los visitantes pueden disfrutar del sol, la arena y el
+                mar Caribe. Además, el pueblo conserva tradiciones culturales únicas, como el centenario ritmo
+                del bullerengue.
+            </p>
+            <br /><br />
+            <div class="image">
+                <img src="img/playa.jpg" alt="Necoclí" />
+            </div>
+            <p>
+                En Necoclí, los turistas pueden explorar la riqueza natural de la región, incluyendo
+                manglares, estuarios y reservas naturales. La gastronomía local es también una atracción
+                destacada, con platos que resaltan los sabores del mar y la tradición culinaria antioqueña.
+            </p>
+            <br /><br />
+            <div class="image">
+                <img src="img/presentacion.jpg" alt="Necoclí" />
+            </div>
+            <p>
+                Bienvenidos al Municipio de Necoclí El sonido de las olas cuando besan la playa, el del viento
+                que mece las palmeras, la tranquilidad que se respira y la enorme riqueza natural, son algunos
+                de los muchos atractivos turísticos de la región. San Sebastián de Urabá, como fue denominada
+                por los conquistadores, no es sólo playa y sol. A una hora de viaje por mar abierto, la
+                naturaleza sorprende por su majestuosidad. Su parque principal, situado en el lugar donde se
+                construyó la primera plaza de mercado, es un lugar amplio rodeado por palmeras, árboles y
+                cocoteros donde revolotean cientos de palomas. Es un municipio alegre por tradición y entre
+                sus fiestas podemos citar las tradicionales Fiestas del Coco, El Festival Nacional del
+                Bullerengue y el Carnaval de Verano. Estas actividades reflejan la tradición ancestral
+                caribeña de nuestros primeros colonos que llegaron posterior a la conquista, de esta manera se
+                empezó a poblar el hoy Municipio de Necoclí. ¡Por El Necoclí Que Soñamos!
+            </p>
+        </div>
+    </body>
 </html>

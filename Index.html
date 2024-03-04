@@ -1,392 +1,402 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/style.css">
-<title>Necloci</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    min-height: 350vh; 
-    padding-bottom: 40px;
-    background-color: #eeb438
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/style.css" />
+        <title>Necloci</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                min-height: 350vh;
+                padding-bottom: 40px;
+                background-color: #eeb438;
+            }
+            .navbar {
+                background-color: #333;
+                overflow: hidden;
+                opacity: 1;
+                background-image: linear-gradient(
+                        30deg,
+                        #000000 12%,
+                        transparent 12.5%,
+                        transparent 87%,
+                        #000000 87.5%,
+                        #000000
+                    ),
+                    linear-gradient(
+                        150deg,
+                        #000000 12%,
+                        transparent 12.5%,
+                        transparent 87%,
+                        #000000 87.5%,
+                        #000000
+                    ),
+                    linear-gradient(
+                        30deg,
+                        #000000 12%,
+                        transparent 12.5%,
+                        transparent 87%,
+                        #000000 87.5%,
+                        #000000
+                    ),
+                    linear-gradient(
+                        150deg,
+                        #000000 12%,
+                        transparent 12.5%,
+                        transparent 87%,
+                        #000000 87.5%,
+                        #000000
+                    ),
+                    linear-gradient(
+                        60deg,
+                        #00000077 25%,
+                        transparent 25.5%,
+                        transparent 75%,
+                        #00000077 75%,
+                        #00000077
+                    ),
+                    linear-gradient(
+                        60deg,
+                        #00000077 25%,
+                        transparent 25.5%,
+                        transparent 75%,
+                        #00000077 75%,
+                        #00000077
+                    );
+                background-size: 32px 56px;
+                background-position: 0 0, 0 0, 16px 28px, 16px 28px, 0 0, 16px 28px;
+            }
+            .navbar a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .navbar a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+            .navbar a.right {
+                float: right;
+            }
 
-  }
-  .navbar {
-    background-color: #333;
-    overflow: hidden;
-  }
-  .navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  .navbar a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  .navbar a.right {
-    float: right;
-  }
+            .hero {
+                width: 100%;
+                height: 95vh;
+                background: url("/img/Portadimg.jpg") center no-repeat;
+                background-size: cover;
+                display: flex;
+                align-items: center;
+                text-align: center;
+            }
 
-  .hero 
-  {
-  width: 100%;
-  height: 95vh;
-  background: url("/img/Portadimg.jpg") center no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
+            .h2-sub {
+                font-size: 3rem;
+                color: #eeb438;
+                font-weight: 600;
+                line-height: 0.4;
+            }
 
-.h2-sub {
-  font-size: 3rem;
-  color: #eeb438;
-  font-weight: 600;
-  line-height: .4;
-}
-
-/* .fil {
+            /* .fil {
   text-transform: uppercase;
   font-size: 3rem;
 } */
 
-.head {
-  color: #fff;
-  font-size: 3.7rem;
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: .5rem;
-}
+            .head {
+                color: #fff;
+                font-size: 3.7rem;
+                text-transform: uppercase;
+                font-weight: 900;
+                letter-spacing: 0.5rem;
+            }
 
-.he-des h5 {
-  color: #fff;
-  font-size: 1.4rem;
-  font-weight: 100;
-  text-transform: uppercase;
-  margin-bottom: 1.2rem;
-  letter-spacing: 3px;
-  margin-right: -3px;
-}
+            .he-des h5 {
+                color: #fff;
+                font-size: 1.4rem;
+                font-weight: 100;
+                text-transform: uppercase;
+                margin-bottom: 1.2rem;
+                letter-spacing: 3px;
+                margin-right: -3px;
+            }
 
-.btn {
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-right: -2px;
-}
+            .btn {
+                display: inline-block;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-right: -2px;
+            }
 
-.cta-btn {
-  font-size: 1.1rem;
-  background-color:white;
-  padding: 1.5rem 3rem;
-  color: black;    
-  border-radius: .4rem;
-  text-decoration: none;
-}
-.cta-btn:hover,
-.cta-btn:focus {
-  color: #fff;
-  background-color: black;
-}
+            .cta-btn {
+                font-size: 1.1rem;
+                background-color: white;
+                padding: 1.5rem 3rem;
+                color: black;
+                border-radius: 0.4rem;
+                text-decoration: none;
+            }
+            .cta-btn:hover,
+            .cta-btn:focus {
+                color: #fff;
+                background-color: black;
+            }
 
+            .global {
+                text-align: center;
+                margin-top: 3.9rem;
+            }
 
-.global {
-  text-align: center;
-  margin-top: 3.9rem;
-}
+            .dis-sto .global {
+                margin-top: 6.9rem;
+            }
 
-.dis-sto .global {
-  margin-top: 6.9rem;
-}
+            .hea-dark {
+                color: #252525;
+                letter-spacing: 0.7rem;
+                margin-right: -0.7rem;
+            }
 
+            .global .h2-sub {
+                letter-spacing: -1px;
+                line-height: 0.42;
+            }
 
-.hea-dark {
-  color: #252525;
-  letter-spacing: .7rem;
-  margin-right: -.7rem;
-}
+            .container {
+                width: 100%;
+                max-width: 122.5rem;
+                margin: 0 auto;
+                padding: 0 2.4rem;
+            }
 
-.global .h2-sub {
-  letter-spacing: -1px;
-  line-height: .42;
-}
+            .taste {
+                background: url("../images/taste.jpg") center no-repeat;
+                background-size: cover;
+            }
 
+            .bt {
+                min-height: 65vh;
+                display: flex;
+                align-items: center;
+            }
+            .info2 {
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: 80%;
+                margin: 70px;
+                margin-left: 10%;
+            }
+            .info2 img {
+                width: 500px;
+            }
+            .texto {
+                position: relative;
+                display: block;
+                align-content: center;
+                margin: 20px;
+                text-align: center;
+            }
+            .titulo {
+                font-size: 20px;
+            }
+            .subtitulo {
+                font-size: 15px;
+            }
+            .imgrestaurante {
+                position: relative;
+                width: 100%;
+            }
+            .imgrestaurante img {
+                display: flex;
+                width: 100%;
+                height: 400px;
+            }
+            .imgrestaurante img:hover {
+                opacity: 0.6;
+            }
+            .titulorestaurante h4 {
+                margin-left: 45%;
+                margin-top: -14%;
+                font-size: 40px;
+            }
+            .info3 {
+                position: absolute;
+                display: grid;
+                padding: 30px;
+                grid-template-columns: auto 1fr;
+                grid-gap: 2pc;
+                margin-top: 140px;
+                margin-left: 5%;
+            }
+            .info3img {
+                display: grid;
+                position: relative;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 1pc;
+            }
+            .texto {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 15px;
+            }
 
-.container {
-  width: 100%;
-  max-width: 122.5rem;
-  margin:  0 auto;
-  padding: 0 2.4rem;
-}
+            .titulo {
+                margin-bottom: 10px;
+            }
 
+            .btn {
+                margin-top: 10px;
+            }
 
+            .subtitulo2 {
+                margin-bottom: 10px;
+            }
 
-.taste {
-  background: url("../images/taste.jpg") center no-repeat;
-  background-size: cover;
-}
-
-.bt {
-
-  min-height: 65vh;
-  display: flex;
-  align-items: center;
-}
-.info2
-{
-  position: relative;
-  display: flex;
-  align-items: center;  
-  width: 80%;
-  margin:70px;
-  margin-left: 10%;
-  
-}
-.info2 img
-{
-  width: 500px;  
-}
-.texto
-{
-  position: relative;
-  display: block;
-  align-content: center;
-  margin: 20px;
-  text-align: center;  
-  
-}
-.titulo
-{
-  font-size: 20px;
-}
-.subtitulo
-{
-  font-size: 15px;
-}
-.imgrestaurante
-{
-  position: relative;  
-  width: 100%;
-
-}
-.imgrestaurante img 
-{
-  display: flex;
-  width: 100%;
-  height:400px;  
-}
-.imgrestaurante img:hover
-{
-  opacity: 0.6;
-}
-.titulorestaurante h4
-{
-  
-  margin-left: 45%;
-  margin-top: -14%;
-  font-size: 40px;
-}
-.info3 
-{
-  position: absolute;
-  display: grid;
-  padding: 30px;
-  grid-template-columns: auto 1fr; 
-  grid-gap: 2pc; 
-  margin-top: 140px;
-  margin-left:5%;
-}
-.info3img 
-{
-  display: grid;
-  position: relative;
-  grid-template-columns: 1fr 1fr; 
-  grid-gap: 1pc; 
-}
-.texto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 15px;
-}
-
-.titulo {
-  margin-bottom: 10px; 
-}
-
-.btn {
-  margin-top: 10px; 
-}
-
-.subtitulo2 {
-  margin-bottom: 10px; 
-}
-
-.imagefondo
-{
-  width: 10%;
-  height: 10%;
-
-}
-.info3img img
-{
-  width: 250px;
-  height: 200px;
-}
-footer
-{
-  position:absolute;
-  background-color: #252525;
-  color: #fff;
-  bottom: 0;
-  width: 100%;
-  height: 9%;
-  align-items: center;  
-}
-.footer-contenido
-{
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  padding: 20px;
-  margin-left: 27%;
-  margin-top: 5%;
-}
-.acercade a
-{
-  position: relative;
-  font-size: 15px;
-  justify-content: space-between;
-  padding: 16px;
-  color: #f2f2f2;
-  text-decoration: none;
-}
-
-
-</style>
-</head>
-<body>
-
-  <div class="navbar">
-    <a href="Index.html">Necocli</a>
-    <a href="Hoteles.html" class="right">Hoteles</a>
-    <a href="Restaurante.html" class="right">Restaurantes</a>
-    <a href="Sitios.html" class="right">Sitios Turísticos</a>
-    <a href="Reseña.html" class="right">Reseña</a>
-    <a href="AcercaDe.html" class="right">Acerca de</a>
-  </div>
-  <section class="hero" id="hero">
-    <div class="container">
-        <h2 class="h2-sub">
-            <span class="fil">Necocli</span>
-        </h2>
-        <h1 class="head">Antioquia</h1>
-        <div class="he-des">
-            <h5>Lorem t dol</h5>
-            <a href="#" class="btn cta-btn">Explorar</a>
+            .imagefondo {
+                width: 10%;
+                height: 10%;
+            }
+            .info3img img {
+                width: 250px;
+                height: 200px;
+            }
+            footer {
+                position: absolute;
+                background-color: #252525;
+                color: #fff;
+                bottom: 0;
+                width: 100%;
+                height: 9%;
+                align-items: center;
+            }
+            .footer-contenido {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                padding: 20px;
+                margin-left: 27%;
+                margin-top: 5%;
+            }
+            .acercade a {
+                position: relative;
+                font-size: 15px;
+                justify-content: space-between;
+                padding: 16px;
+                color: #f2f2f2;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="Index.html">Necocli</a>
+            <a href="Hoteles.html" class="right">Hoteles</a>
+            <a href="Restaurante.html" class="right">Restaurantes</a>
+            <a href="Sitios.html" class="right">Sitios Turísticos</a>
+            <a href="Reseña.html" class="right">Reseña</a>
+            <a href="AcercaDe.html" class="right">Acerca de</a>
         </div>
-    </div>
-</section>
+        <section class="hero" id="hero">
+            <div class="container">
+                <h2 class="h2-sub">
+                    <span class="fil">Necocli</span>
+                </h2>
+                <h1 class="head">Antioquia</h1>
+                <div class="he-des">
+                    <h5>Lorem t dol</h5>
+                    <a href="#" class="btn cta-btn">Explorar</a>
+                </div>
+            </div>
+        </section>
 
-<section>
-  <div class="info2">
-    <div>
-      <img src="/img/portada2img.jpg" alt="">      
-    </div>
+        <section>
+            <div class="info2">
+                <div>
+                    <img src="/img/portada2img.jpg" alt="" />
+                </div>
 
-    <div class="texto">
-      <div class="titulo">
-        <h2>titutlo</h2>
-      </div>
-      <div class="subtitulo">
-        <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ab asperiores quia accusamus officia. Odio aspernatur facere!</h4>
-      </div>
-      <div class="btn">
-        <a href=""  class="btn cta-btn">ver mas</a>
-      </div>
-    </div>
-  </div>
-</section>
+                <div class="texto">
+                    <div class="titulo">
+                        <h2>titutlo</h2>
+                    </div>
+                    <div class="subtitulo">
+                        <h4>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ab asperiores
+                            quia accusamus officia. Odio aspernatur facere!
+                        </h4>
+                    </div>
+                    <div class="btn">
+                        <a href="" class="btn cta-btn">ver mas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section>
-  <div class="imgrestaurante">
-    <div>
-      <img src="/img/portada3img.jpg" alt="">      
-    </div>
-    <div class="titulorestaurante">
-      <h4>
-        Restarunte
-      </h4>
-    </div>
-  </div>
-</section>
+        <section>
+            <div class="imgrestaurante">
+                <div>
+                    <img src="/img/portada3img.jpg" alt="" />
+                </div>
+                <div class="titulorestaurante">
+                    <h4>Restarunte</h4>
+                </div>
+            </div>
+        </section>
 
-<section>
-  <div class="info3">
-    <div class="info3img">
-      <div class="imagefondo">
-        <img src="/img/portada2img.jpg" alt="">
-      </div>
+        <section>
+            <div class="info3">
+                <div class="info3img">
+                    <div class="imagefondo">
+                        <img src="/img/portada2img.jpg" alt="" />
+                    </div>
 
-      <div class="imagefondo">
-        <img src="/img/portada2img.jpg" alt="">
-      </div>
+                    <div class="imagefondo">
+                        <img src="/img/portada2img.jpg" alt="" />
+                    </div>
 
-      <div class="imagefondo">
-        <img src="/img/portada2img.jpg" alt="">
-      </div>
+                    <div class="imagefondo">
+                        <img src="/img/portada2img.jpg" alt="" />
+                    </div>
 
-      <div class="imagefondo">
-        <img src="/img/portada2img.jpg" alt="">
-      </div>
-            
-     
-      
-    </div>
+                    <div class="imagefondo">
+                        <img src="/img/portada2img.jpg" alt="" />
+                    </div>
+                </div>
 
-    <div class="texto">
-      <div class="titulo">
-        <h2>titutlo</h2>
-      </div>
-      <div class="subtitulo2">
-        <h4>Laboriosam ab asperiores quia accusamus officia. Odio aspernatur facere!</h4>
-      </div>
-      <div class="btn">
-        <a href=""  class="btn cta-btn" >ver mas</a>
-      </div>
-    </div>
-  </div>
-</section>
+                <div class="texto">
+                    <div class="titulo">
+                        <h2>titutlo</h2>
+                    </div>
+                    <div class="subtitulo2">
+                        <h4>Laboriosam ab asperiores quia accusamus officia. Odio aspernatur facere!</h4>
+                    </div>
+                    <div class="btn">
+                        <a href="" class="btn cta-btn">ver mas</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<footer>
- <div class="container">
-  <div class="footer-contenido">
-    <div class="acercade">
-      <a href="/AcercaDe.html">Acerca de </a>
-      <a href="/Hoteles.html">Hoteles</a>
-      <a href="/Reseña.html">Reseña</a>
-      <a href="/Restaurante.html">Restaruntes</a>
-      <a href="/Sitios.html">Sitios</a>
-      <a href="/Index.html">Inicio</a>
-    </div>  
-  </div>
- </div>
-</footer>
-
-
-
-
-
-
-
-</body>
+        <footer>
+            <div class="container">
+                <div class="footer-contenido">
+                    <div class="acercade">
+                        <a href="/AcercaDe.html">Acerca de </a>
+                        <a href="/Hoteles.html">Hoteles</a>
+                        <a href="/Reseña.html">Reseña</a>
+                        <a href="/Restaurante.html">Restaruntes</a>
+                        <a href="/Sitios.html">Sitios</a>
+                        <a href="/Index.html">Inicio</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
 </html>
