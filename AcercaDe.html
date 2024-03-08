@@ -1,46 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Acerca de</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  .navbar {
-    background-color: #333;
-    overflow: hidden;
-  }
-  .navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  .navbar a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  .navbar a.right {
-    float: right;
-  }
-</style>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Acerca de</title>
+        <style>
+            * {
+                border-radius: 10px 10px;
+            }
+            body {
+                font-family: Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                opacity: 1;
+                background-color: #eeb438;
+                opacity: 1;
+                background: linear-gradient(135deg, #006d9c55 25%, transparent 25%) -25px 0/ 50px 50px,
+                    linear-gradient(225deg, #006d9c 25%, transparent 25%) -25px 0/ 50px 50px,
+                    linear-gradient(315deg, #006d9c55 25%, transparent 25%) 0px 0/ 50px 50px,
+                    linear-gradient(45deg, #006d9c 25%, #eeb438 25%) 0px 0/ 50px 50px;
+            }
+            .navbar {
+                background-color: #333;
+                overflow: hidden;
+                background-color: #333;
+                opacity: 1;
+                background-image: linear-gradient(
+                        30deg,
+                        #000000 12%,
+                        transparent 12.5%,
+                        transparent 87%,
+                        #000000 87.5%,
+                        #000000
+                    ),
+                    linear-gradient(
+                        150deg,
+                        #000000 12%,
+                        transparent 12.5%,
+                        transparent 87%,
+                        #000000 87.5%,
+                        #000000
+                    ),
+                    linear-gradient(
+                        30deg,
+                        #000000 12%,
+                        transparent 12.5%,
+                        transparent 87%,
+                        #000000 87.5%,
+                        #000000
+                    ),
+                    linear-gradient(
+                        150deg,
+                        #000000 12%,
+                        transparent 12.5%,
+                        transparent 87%,
+                        #000000 87.5%,
+                        #000000
+                    ),
+                    linear-gradient(
+                        60deg,
+                        #00000077 25%,
+                        transparent 25.5%,
+                        transparent 75%,
+                        #00000077 75%,
+                        #00000077
+                    ),
+                    linear-gradient(
+                        60deg,
+                        #00000077 25%,
+                        transparent 25.5%,
+                        transparent 75%,
+                        #00000077 75%,
+                        #00000077
+                    );
+                background-size: 32px 56px;
+                background-position: 0 0, 0 0, 16px 28px, 16px 28px, 0 0, 16px 28px;
+            }
+            .navbar a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .navbar a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+            .navbar a.right {
+                float: right;
+            }
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                padding: 20px;
+            }
 
-<div class="navbar">
-  <a href="Index.html">Necocli</a>
-  <a href="Hoteles.html" class="right">Hoteles</a>
-  <a href="Restaurante.html" class="right">Restaurantes</a>
-  <a href="Sitios.html" class="right">Sitios Turísticos</a>
-  <a href="Reseña.html" class="right">Reseña</a>
-  <a href="AcercaDe.html" class="right">Acerca de</a>
-</div>
+            .card {
+                width: 300px;
+                margin: 20px;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+                background-color: #000000; /* Color de fondo de la tarjeta */
+            }
 
-</body>
+            .card:hover {
+                transform: translateY(-10px);
+            }
+
+            .card img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px 10px 0 0;
+            }
+
+            .card .content {
+                padding: 20px;
+            }
+
+            .card h3 {
+                margin-top: 0;
+                font-size: 24px;
+                color: #333; /* Color de texto del título */
+            }
+
+            .card p {
+                color: #666; /* Color de texto del contenido */
+            }
+
+            .card .info {
+                display: none;
+                margin-top: 20px;
+            }
+
+            .card:hover .info {
+                display: block;
+            }
+            header {
+                background-color: #006d9c; /* Color de fondo del encabezado */
+                color: #fff; /* Color de texto del encabezado */
+                padding: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="Index.html">Necocli</a>
+            <a href="Hoteles.html" class="right">Hoteles</a>
+            <a href="Restaurante.html" class="right">Restaurantes</a>
+            <a href="Sitios.html" class="right">Sitios Turísticos</a>
+            <a href="Reseña.html" class="right">Reseña</a>
+            <a href="AcercaDe.html" class="right">Acerca de</a>
+        </div>
+        <br />
+        <header>
+            <h1>Acerca De</h1>
+        </header>
+
+        <br /><br />
+        <div class="container">
+            <div class="card" style="background-color: #f7dfb5">
+                <!-- Color de fondo de la tarjeta -->
+                <div class="image-container">
+                    <img src="img/MMM.gif" alt="Imagen" />
+                    <div class="overlay">
+                        <h2>Jose david lopez jaramillo</h2>
+                        <div class="info">
+                            <p style="text-align: center;">
+                                Soy un apacionado de los videojuegos, me gusta la tecnologia y me fascina el
+                                hardaware de computadora Entre en el mundo de la programacion de software
+                                porque me gusta la idea de dar solucion a un problema por medio del mundo
+                                digital ne la medida de lo posible.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="background-color: #f7dfb5">
+                <!-- Color de fondo de la tarjeta -->
+                <div class="image-container">
+                    <img src="img/user.png" alt="Imagen" />
+                    <div class="overlay">
+                        <h2>Johan Arley M.</h2>
+                        <div class="info">
+                            <p style="text-align: center;">
+                                Mi nombre es Johan Arley Marin y soy un tecnico en desarrollado de software. Soy un programador junior, y disfruto usar mis habilidades para contribuir a los emocionantes avances tecnológicos que ocurren todos los días en nuestro planeta. Soy amante de la tecnologia y me apasionan los videojuegos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="background-color: #f7dfb5">
+                <!-- Color de fondo de la tarjeta -->
+                <div class="image-container">
+                    <img src="img/user.png" alt="Imagen" />
+                    <div class="overlay">
+                        <h2>Yeison Moreno</h2>
+                        <div class="info">
+                            <p style="text-align: center;">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+                                distinctio nihil quia, consequatur amet neque magnam totam quo deleniti
+                                impedit dolorem dolor? Beatae illo sit aliquam veniam excepturi? Qui,
+                                mollitia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
